@@ -1,0 +1,129 @@
+@font-face {
+    font-family: acorn-font-semibold;
+    src: url('font/Acorn-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: acorn-font-medium;
+    src: url('font/Acorn-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: acorn-font-regular;
+    src: url('font/Acorn-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #0093CE;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: acorn-font-medium;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: acorn-font-semibold;
+    font-size: 3.5rem;
+}
+
+#imagem > img {
+    height: 250px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out; 
+}
+
+#imagem > img:hover {
+    height: 250px;
+    transform: scale(1.1);
+}
+
+#selecionar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    backdrop-filter: blur(500px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+}
+
+.cidade {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#input {
+    outline: none;
+    padding: 5px 10px;
+    margin: 0px 20px;
+    font-size: 1.3rem;
+    font-family: acorn-font-medium;
+    background-color: #0005;
+    border: solid 1px #0009;
+    border-radius: 8px;
+    color: #fff;
+}
+
+#btnEnviar {
+    font-family: acorn-font-medium;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(91,89,89);
+}
+
+#dadosClimaticos {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 2rem;
+    gap: 20px;
+}
+
+#dadosClimaticos > div {
+    background-color: rgba(255, 255, 255, 0.37);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dadosClimaticos .value {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#dadosClimaticos .card-name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#dadosClimaticos .card-name img{
+    height: 1em;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header id="titulo">
+        <h1>Weather App</h1>
+        <div id="imagem">
+            <img src="images/cloudy.png" alt="imagem de nuvem">
+        </div>
+    </header>
+    <div id="selecionar">
+        <div class="cidade">
+            <input type="text" id="input">
+            <button id="btnEnviar">Enviar</button>
+        </div>
+    </div>
+    <div id="container">
+        <div id="dadosClimaticos">
+            <div id="temperatura">
+                <span class="card-name">
+                     Temperatura
+                     <img src="images/hot.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="chuva">
+                <span class="card-name"> 
+                    Chuva
+                    <img src="images/cloudy-rain.png" alt=""> 
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="clima">
+                <span class="card-name">
+                    Clima
+                    <img src="images/cloudy.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="dia">
+                <span class="card-name">
+                    Dia
+                    <img id="dayIcon" src="images/sun.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
