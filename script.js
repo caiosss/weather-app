@@ -25,7 +25,6 @@ const api_key = "os5UexDzEhGD7d0hGaAq78I1hRXxLvwH"
 botao.addEventListener('click',async () => {
     const value = input.value
     const resultado = await currentConditions(value)
-    console.log(resultado)
 
     const time = formatarData(resultado.LocalObservationDateTime)
     
