@@ -102,7 +102,7 @@ botao.addEventListener('click',async () => {
 })
 
 async function requesitarDados(value) {
-    const url = `https://dataservice.accuweather.com/locations/v1/search?q=${value}&apikey=${api_key}`
+    const url = `http://dataservice.accuweather.com/locations/v1/search?q=${value}&apikey=${api_key}`
 
     const response = await fetch(url)
     if(!response.ok){
@@ -118,7 +118,7 @@ async function currentConditions(value) {
     if(!key){
         alert("Erro em conseguir a chave!")
     }
-    const url = `https://dataservice.accuweather.com/currentconditions/v1/${key.Key}?apikey=${api_key}&language=pt-br&details=true`
+    const url = `http://dataservice.accuweather.com/currentconditions/v1/${key.Key}?apikey=${api_key}&language=pt-br&details=true`
     
     const response = await fetch(url)
     if(!response.ok){
