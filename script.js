@@ -17,6 +17,7 @@ const senseTemp = document.querySelector("#temp-sensacao .value")
 const senseTempSombra = document.querySelector("#temp-sensacao-sombra .value")
 const uvIndex = document.querySelector("#uv-index .value")
 const alturaNuvem = document.querySelector("#ceiling .value")
+const precipitacao = document.querySelector("#chuva .precipitation-value")
 const dayIcon = document.querySelector("#dayIcon")
 const dateTime = document.querySelector(".date-time")
 const api_key = "os5UexDzEhGD7d0hGaAq78I1hRXxLvwH"
@@ -44,6 +45,7 @@ botao.addEventListener('click',async () => {
     const chuva = resultado.HasPrecipitation
     const sumarioChuvaValue = resultado.PrecipitationSummary.Past24Hours.Metric.Value
     const sumarioChuvaUnit = resultado.PrecipitationSummary.Past24Hours.Metric.Unit
+    const precipitationType = resultado.PrecipitationType
 
     const clima = resultado.WeatherText
     const nuvens = resultado.CloudCover
@@ -75,6 +77,7 @@ botao.addEventListener('click',async () => {
 
     updateValue(chuvaValue, chuva === true ? "Sim" : "Não")
     updateValue(sumarioValue, `${sumarioChuvaValue} ${sumarioChuvaUnit}`)
+    updateValue(precipitacao, precipitationType !== null ? `${precipitationType}` : `Sem precipitação`)
     
     updateValue(climaValue, `${clima}`)
     updateValue(cloudValue, nuvens !== null ? `${nuvens} %` : "0%" )
@@ -103,6 +106,9 @@ async function requesitarDados(value) {
     const url = `http://dataservice.accuweather.com/locations/v1/search?q=${value}&apikey=${api_key}`
 
     const response = await fetch(url)
+    if(!response.ok){
+        alert("Erro em encontrar a localização: " + response.statusText)
+    }
     const data = await response.json()
     const [objeto] = data
     return objeto
@@ -110,9 +116,15 @@ async function requesitarDados(value) {
 
 async function currentConditions(value) {
     const key = await requesitarDados(value)
+    if(!key){
+        alert("Erro em conseguir a chave!")
+    }
     const url = `http://dataservice.accuweather.com/currentconditions/v1/${key.Key}?apikey=${api_key}&language=pt-br&details=true`
     
     const response = await fetch(url)
+    if(!response.ok){
+        alert("Erro em encontrar as condições atuais: " + response.statusText)
+    }
     const data = await response.json()
     const [objeto] = data
     return objeto
