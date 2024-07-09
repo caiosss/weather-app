@@ -5,7 +5,9 @@
 <img src="./image-readMe/projeto-gif.gif" width="600px">
 </p>
 
-https://github.com/caiosss/weather-app/assets/138716168/6dfb8969-8d54-4dda-a021-953d2f26a819
+
+https://github.com/caiosss/weather-app/assets/138716168/f699c0c3-c5ed-41c2-8f37-ea153928dd73
+
 
 ## 💭 O que é esse projeto?
 Esse projeto é uma página feita com HTML, CSS e Javascript que contém um input para inserir o nome de uma cidade e um botão de enviar o nome para que haja a devida localização com o retorno de dados meteriológicos.
