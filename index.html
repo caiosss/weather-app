@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
@@ -16,6 +16,7 @@
     </header>
     <div id="selecionar">
         <div class="cidade">
+            <span class="date-time"></span>
             <input type="text" id="input">
             <button id="btnEnviar">Enviar</button>
         </div>
@@ -47,6 +48,27 @@
                 <span class="card-name">
                     Dia
                     <img id="dayIcon" src="images/sun.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="humidade">
+                <span class="card-name">
+                    Humidade
+                    <img id="dayIcon" src="images/humidity.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="vento">
+                <span class="card-name">
+                    Vento
+                    <img id="dayIcon" src="images/wind.png" alt="">
+                </span>
+                <span class="value">--</span>
+            </div>
+            <div id="pressao">
+                <span class="card-name">
+                    Pressao
+                    <img id="dayIcon" src="images/wind.png" alt="">
                 </span>
                 <span class="value">--</span>
             </div>
