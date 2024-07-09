@@ -6,7 +6,7 @@
 </p>
 
 
-https://github.com/caiosss/weather-app/assets/138716168/f699c0c3-c5ed-41c2-8f37-ea153928dd73
+https://github.com/caiosss/weather-app/assets/138716168/5ad47e3f-2bb8-4807-a244-94663e68fc39
 
 
 ## 💭 O que é esse projeto?
